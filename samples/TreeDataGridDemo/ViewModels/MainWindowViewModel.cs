@@ -6,6 +6,7 @@
         private FilesPageViewModel? _files;
         private WikipediaPageViewModel? _wikipedia;
         private DragDropPageViewModel? _dragDrop;
+        private DiffVM? _diffVM;
 
         public CountriesPageViewModel Countries
         {
@@ -25,6 +26,10 @@
         public DragDropPageViewModel DragDrop
         {
             get => _dragDrop ??= new DragDropPageViewModel();
+        }
+        public DiffVM Diffs
+        {
+            get => _diffVM ??= new DiffVM();
         }
     }
 }

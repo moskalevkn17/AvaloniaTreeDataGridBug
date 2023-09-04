@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Avalonia.Controls.TreeDataGrid": {
+      "commandName": "Project"
+    }
+  }
+}

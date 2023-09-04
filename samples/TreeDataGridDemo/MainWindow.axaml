@@ -137,5 +137,31 @@
                       RowDragOver="DragDrop_RowDragOver"/>
       </DockPanel>
     </TabItem>
+    <TabItem Header="Diffs">
+      <DockPanel>
+        <TextBlock Classes="realized-count" DockPanel.Dock="Bottom"/>
+        <TreeDataGrid Name="diffsTest"
+                      Source="{Binding Diffs.Source}">
+          <TreeDataGrid.Resources>
+            <DataTemplate x:Key="Names">
+              <ContentPresenter Content="{Binding}">
+                <ContentPresenter.DataTemplates>
+
+                  <DataTemplate DataType="{x:Type m:DiffA}">
+                    <TextBlock Text="{Binding Name}" Background="Blue"/>
+                  </DataTemplate>
+
+                  <DataTemplate DataType="{x:Type m:DiffB}">
+                    <TextBlock Text="{Binding Name}" Height="30" Background="Red"/>
+                  </DataTemplate>
+
+                </ContentPresenter.DataTemplates>
+              </ContentPresenter>
+            </DataTemplate>
+          </TreeDataGrid.Resources>
+          
+        </TreeDataGrid>            
+      </DockPanel>
+    </TabItem>
   </TabControl>
 </Window>
